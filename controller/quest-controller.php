@@ -32,4 +32,11 @@ class QuestController{
         $questManager->update($quest);
         header('Location: /prototype-mvc/index.php?controller=default&action=home');
     }
+
+    public function resetIndex(){
+        $questManager = new QuestManager;
+        $questManager->resetIndex();
+        header('Location: /prototype-mvc/index.php?controller=default&action=home');
+
+    }
 }

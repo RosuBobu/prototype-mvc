@@ -1,6 +1,6 @@
 <?php 
-    // var_dump($_GET);
-    // var_dump($quest); 
+    var_dump($_GET);
+    var_dump($quest); 
 ?>
 <html>
 <head>

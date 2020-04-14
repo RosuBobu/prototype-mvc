@@ -51,7 +51,7 @@
             $content = $quest->getContent();
             $submitdate = $quest->getSubmitDate();
             $id = $quest->getId();
-            $req = $this->db->prepare('UPDATE quests SET title=?, content=?, submitdate=? WHERE id=?');
+            $req = $this->db->prepare('UPDATE quests SET title=? content=?, submitdate=? WHERE id=?');
             $req->bindParam(1, $title);
             $req->bindParam(2, $content);
             $req->bindParam(3, $submitdate);

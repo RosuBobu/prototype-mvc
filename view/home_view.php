@@ -7,6 +7,16 @@
 
             <h1>&diams;&diams;&diams;Welcome to the Kingdom &diams;&diams;&diams;</h1>
 
+            <?php
+                 $nbQuest = count($quests);
+                 if($nbQuest===0){
+                 echo('<a href="../prototype-mvc/index.php?controller=quest&action=resetIndex">
+                 <button style="margin-bottom: 10px;" class="btn btn-warning">Reset index of register</button>
+                    </a>');
+                }
+            ?>
+
+
             <a href="../prototype-mvc/index.php?controller=quest&action=addForm">
                 <button style="margin-bottom: 10px;" class="btn btn-primary">Add a quest !</button>
             </a>
@@ -23,7 +33,9 @@
                 </thead>
                 <tbody>
                     <?php 
+                   
                         foreach($quests as $quest){
+                        
                     ?>
                         <tr>
                             <td><?php echo($quest->getId());?></td>
